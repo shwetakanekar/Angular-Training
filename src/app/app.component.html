@@ -45,3 +45,10 @@
 <button (click)="updateCount('plus')">+</button>
 <p>Count: {{ counter }}</p>
 <button (click)="updateCount('minus')">-</button>
+
+<hr />
+<h3>Property Binding Example</h3>
+<!-- interpolation treates boolean as string and evaluates to true -->
+<input type="text" name="name" value="John" disabled="{{ disable }}" />
+<br /><br />
+<input type="text" name="name" value="John" [disabled]="disable" />

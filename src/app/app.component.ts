@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'blog';
   displayValue = '';
   counter = 0;
+  disable = false;
 
   logData(data: string) {
     console.log(data);
