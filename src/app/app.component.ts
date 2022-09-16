@@ -12,6 +12,7 @@ export class AppComponent {
   disable = false;
   show = false;
   color = 'blue';
+  bgColor = 'skyblue';
   users = [
     {
       id: 1,
@@ -43,5 +44,10 @@ export class AppComponent {
 
   updateCount(operation: string) {
     operation === 'plus' ? this.counter++ : this.counter--;
+  }
+
+  updateColor() {
+    this.color = 'green';
+    this.bgColor = 'orange';
   }
 }

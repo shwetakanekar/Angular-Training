@@ -100,3 +100,8 @@
     <li>{{ hobby }}</li>
   </ul>
 </ul>
+
+<hr />
+<!-- Style Binding -->
+<h1 [style.color]="color" [style.backgroundColor]="bgColor">Style Binding</h1>
+<button (click)="updateColor()">Update color</button>
