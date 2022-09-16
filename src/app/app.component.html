@@ -54,6 +54,7 @@
 <input type="text" name="name" value="John" [disabled]="disable" />
 
 <hr />
+<!-- If-Else condition -->
 <p *ngIf="show; then ifBlock; else elseBlock"></p>
 <ng-template #ifBlock>
   <h4>If Block</h4>
@@ -61,4 +62,16 @@
 
 <ng-template #elseBlock>
   <h4>Else Block</h4>
+</ng-template>
+
+<hr />
+<!-- If-Else-If condition (3-4 conditions) -->
+<ng-template [ngIf]="color === 'red'">
+  <p style="color: red">Red Color</p>
+</ng-template>
+<ng-template [ngIf]="color === 'green'">
+  <p style="color: green">Green Color</p>
+</ng-template>
+<ng-template [ngIf]="color === 'blue'">
+  <p style="color: blue">Blue Color</p>
 </ng-template>

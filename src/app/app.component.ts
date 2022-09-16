@@ -11,6 +11,7 @@ export class AppComponent {
   counter = 0;
   disable = false;
   show = false;
+  color = 'blue';
 
   logData(data: string) {
     console.log(data);
