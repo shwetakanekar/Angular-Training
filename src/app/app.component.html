@@ -124,3 +124,8 @@
   <li>Password: {{ loginFormData.password }}</li>
   <li>Remember me: {{ loginFormData.rememberMe }}</li>
 </ul>
+
+<hr />
+<!-- Toggle element -->
+<button (click)="toggle()">Toggle</button>
+<p *ngIf="display">Click Toggle button to hide me</p>

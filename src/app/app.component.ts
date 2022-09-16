@@ -15,6 +15,7 @@ export class AppComponent {
   color = 'blue';
   bgColor = 'skyblue';
   loginFormData: any = {};
+  display = true;
   users = [
     {
       id: 1,
@@ -56,5 +57,9 @@ export class AppComponent {
   getData(data: NgForm) {
     console.log(data);
     this.loginFormData = data;
+  }
+
+  toggle() {
+    this.display = !this.display;
   }
 }
