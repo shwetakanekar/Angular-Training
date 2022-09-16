@@ -75,3 +75,12 @@
 <ng-template [ngIf]="color === 'blue'">
   <p style="color: blue">Blue Color</p>
 </ng-template>
+
+<hr />
+<!-- Switch case (for many conditions) -->
+<div [ngSwitch]="color">
+  <h4 *ngSwitchCase="'red'" style="color: red">red color</h4>
+  <h4 *ngSwitchCase="'green'" style="color: green">green color</h4>
+  <h4 *ngSwitchCase="'blue'" style="color: blue">blue color</h4>
+  <h4 *ngSwitchDefault>unknown color</h4>
+</div>
