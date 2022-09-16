@@ -35,3 +35,7 @@
 <h4 (mouseover)="logData('Mouse Over')">Mouse Over</h4>
 
 <h4 (mouseleave)="logData('Mouse Leave')">Mouse Leave</h4>
+
+<input #box type="text" name="username" placeholder="Enter name" />
+<button (click)="getValue(box.value)">Click Me</button>
+<p>{{ displayValue }}</p>
