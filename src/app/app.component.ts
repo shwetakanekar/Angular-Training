@@ -10,6 +10,7 @@ export class AppComponent {
   displayValue = '';
   counter = 0;
   disable = false;
+  show = false;
 
   logData(data: string) {
     console.log(data);

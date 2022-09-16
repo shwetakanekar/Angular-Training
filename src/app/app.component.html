@@ -52,3 +52,13 @@
 <input type="text" name="name" value="John" disabled="{{ disable }}" />
 <br /><br />
 <input type="text" name="name" value="John" [disabled]="disable" />
+
+<hr />
+<p *ngIf="show; then ifBlock; else elseBlock"></p>
+<ng-template #ifBlock>
+  <h4>If Block</h4>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h4>Else Block</h4>
+</ng-template>
