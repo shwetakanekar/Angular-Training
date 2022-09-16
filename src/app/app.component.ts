@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent {
   show = false;
   color = 'blue';
   bgColor = 'skyblue';
+  loginFormData: any = {};
   users = [
     {
       id: 1,
@@ -49,5 +51,10 @@ export class AppComponent {
   updateColor() {
     this.color = 'green';
     this.bgColor = 'orange';
+  }
+
+  getData(data: NgForm) {
+    console.log(data);
+    this.loginFormData = data;
   }
 }

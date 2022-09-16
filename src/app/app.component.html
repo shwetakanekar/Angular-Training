@@ -106,3 +106,21 @@
 <!-- Style Binding -->
 <h1 [style.color]="color" [style.backgroundColor]="bgColor">Style Binding</h1>
 <button (click)="updateColor()">Update color</button>
+
+<hr />
+<!-- Form -->
+<form #loginForm="ngForm" (submit)="getData(loginForm.value)">
+  <input type="text" ngModel name="username" placeholder="Enter username" />
+  <br /><br />
+  <input type="password" ngModel name="password" placeholder="Enter password" />
+  <br /><br />
+  <input type="checkbox" ngModel name="rememberMe" id="remember-me" />
+  <label for="remember-me">Remember me</label>
+  <br /><br />
+  <button>Submit</button>
+</form>
+<ul>
+  <li>Username: {{ loginFormData.username }}</li>
+  <li>Password: {{ loginFormData.password }}</li>
+  <li>Remember me: {{ loginFormData.rememberMe }}</li>
+</ul>
