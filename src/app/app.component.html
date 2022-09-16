@@ -30,7 +30,7 @@
   #input4
   (input)="logData(input4.value)"
 />
-<br />
+<hr />
 
 <h4 (mouseover)="logData('Mouse Over')">Mouse Over</h4>
 
@@ -39,3 +39,9 @@
 <input #box type="text" name="username" placeholder="Enter name" />
 <button (click)="getValue(box.value)">Click Me</button>
 <p>{{ displayValue }}</p>
+
+<hr />
+<h3>Counter</h3>
+<button (click)="updateCount('plus')">+</button>
+<p>Count: {{ counter }}</p>
+<button (click)="updateCount('minus')">-</button>

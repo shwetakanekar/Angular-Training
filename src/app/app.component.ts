@@ -8,11 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'blog';
   displayValue = '';
+  counter = 0;
+
   logData(data: string) {
     console.log(data);
   }
 
   getValue(val: string) {
     this.displayValue = val;
+  }
+
+  updateCount(operation: string) {
+    operation === 'plus' ? this.counter++ : this.counter--;
   }
 }
