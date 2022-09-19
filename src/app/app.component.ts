@@ -85,4 +85,8 @@ export class AppComponent {
   updateData(data: string) {
     this.inputFromChild = data;
   }
+
+  onRegistrationFormSubmit(formData: any) {
+    console.log(formData);
+  }
 }

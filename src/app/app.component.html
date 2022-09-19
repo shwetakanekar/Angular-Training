@@ -175,3 +175,16 @@
 <p>Slice pipe: {{ "Hello world" | slice: 1:4 }}</p>
 <p>Custom pipe - inrToUsd: {{ 100 | inrToUsd: 80 }}</p>
 <p>Custom pipe - replace: {{ "I'm_learning_angular" | replace: "_":" " }}</p>
+
+<hr />
+<h4>Template-driven form</h4>
+<form
+  #registrationForm="ngForm"
+  (ngSubmit)="onRegistrationFormSubmit(registrationForm.value)"
+>
+  <input type="text" name="username" placeholder="Enter username" ngModel />
+  <br /><br />
+  <input type="password" name="password" placeholder="Enter password" ngModel />
+  <br /><br />
+  <button>Register</button>
+</form>
