@@ -7,9 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './child/child.component';
 import { InrToUsdPipe } from './pipes/inr-to-usd.pipe';
+import { ReplacePipe } from './pipes/replace.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ChildComponent, InrToUsdPipe],
+  declarations: [AppComponent, HeaderComponent, ChildComponent, InrToUsdPipe, ReplacePipe],
   imports: [BrowserModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
