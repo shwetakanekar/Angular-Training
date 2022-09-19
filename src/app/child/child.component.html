@@ -1,2 +1,7 @@
+<h4>Passing data from child to parent</h4>
+<input type="text" #box />
+<button (click)="updateDataEvent.emit(box.value)">Update Data</button>
+<hr />
+<h4>Passing data from parent to child</h4>
 <p>{{ data }}</p>
 <p>Random Number: {{ randomNumber }}</p>

@@ -38,6 +38,7 @@ export class AppComponent {
   ];
   toDoList: any[] = [];
   randomNum: number = 0;
+  inputFromChild: string = '';
 
   logData(data: string) {
     console.log(data);
@@ -76,5 +77,9 @@ export class AppComponent {
 
   generateRandomNumber() {
     this.randomNum = Math.floor(Math.random() * 10);
+  }
+
+  updateData(data: string) {
+    this.inputFromChild = data;
   }
 }

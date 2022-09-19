@@ -148,9 +148,10 @@
 </ul>
 
 <hr />
-<h4>Pasing data from parent to child</h4>
 <app-child
   [data]="'hello from app-component'"
   [randomNumber]="randomNum"
+  (updateDataEvent)="updateData($event)"
 ></app-child>
 <button (click)="generateRandomNumber()">Update Random Number</button>
+<p>Input value from child component: {{ inputFromChild }}</p>
