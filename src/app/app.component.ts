@@ -37,6 +37,7 @@ export class AppComponent {
     },
   ];
   toDoList: any[] = [];
+  randomNum: number = 0;
 
   logData(data: string) {
     console.log(data);
@@ -71,5 +72,9 @@ export class AppComponent {
 
   removeTask(id: number) {
     this.toDoList = this.toDoList.filter((task) => task.id !== id);
+  }
+
+  generateRandomNumber() {
+    this.randomNum = Math.floor(Math.random() * 10);
   }
 }

@@ -146,3 +146,11 @@
 <ul *ngFor="let task of toDoList">
   <li>{{ task.task }} <button (click)="removeTask(task.id)">Remove</button></li>
 </ul>
+
+<hr />
+<h4>Pasing data from parent to child</h4>
+<app-child
+  [data]="'hello from app-component'"
+  [randomNumber]="randomNum"
+></app-child>
+<button (click)="generateRandomNumber()">Update Random Number</button>
