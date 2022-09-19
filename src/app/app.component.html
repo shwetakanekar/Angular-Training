@@ -160,3 +160,12 @@
 <h4>Two-way binding</h4>
 <input type="text" [(ngModel)]="twoWayBindingData" />
 <p>{{ twoWayBindingData }}</p>
+
+<hr />
+<h4>Pipes</h4>
+<p>Original string: {{ message }}</p>
+<p>String with uppercase pipe: {{ message | uppercase }}</p>
+<p>String with lowercase pipe: {{ message | lowercase }}</p>
+<p>Original date: {{ todaysDate }}</p>
+<p>Date with date pipe: {{ todaysDate | date }}</p>
+<p>Date with date pipe: {{ todaysDate | date: "fullDate" }}</p>

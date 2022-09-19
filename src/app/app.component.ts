@@ -40,6 +40,8 @@ export class AppComponent {
   randomNum: number = 0;
   inputFromChild: string = '';
   twoWayBindingData: string = '';
+  message: string = 'Hello from app-component';
+  todaysDate = new Date();
 
   logData(data: string) {
     console.log(data);
