@@ -182,9 +182,32 @@
   #registrationForm="ngForm"
   (ngSubmit)="onRegistrationFormSubmit(registrationForm.value)"
 >
-  <input type="text" name="username" placeholder="Enter username" ngModel />
-  <br /><br />
-  <input type="password" name="password" placeholder="Enter password" ngModel />
-  <br /><br />
-  <button>Register</button>
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter email"
+    #email="ngModel"
+    required
+    email
+    ngModel
+  />
+  <br />
+  <span *ngIf="email.invalid && email.touched" style="color: red"
+    >Please enter valid email</span
+  >
+  <br />
+  <input
+    type="password"
+    name="password"
+    placeholder="Enter password"
+    required
+    minlength="8"
+    #password="ngModel"
+    ngModel
+  />
+  <br />
+  <span *ngIf="password.invalid && password.touched" style="color: red"
+    >Please enter valid password</span
+  ><br />
+  <button [disabled]="registrationForm.invalid">Register</button>
 </form>
