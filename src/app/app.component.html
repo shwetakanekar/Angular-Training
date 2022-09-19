@@ -169,3 +169,7 @@
 <p>Original date: {{ todaysDate }}</p>
 <p>Date with date pipe: {{ todaysDate | date }}</p>
 <p>Date with date pipe: {{ todaysDate | date: "fullDate" }}</p>
+<p>JSON pipe: {{ users | json }}</p>
+<p>Currency pipe: {{ 100 | currency: "INR" }}</p>
+<p>Number pipe: {{ 03.345678 | number: "1.2-3" }}</p>
+<p>Slice pipe: {{ "Hello world" | slice: 1:4 }}</p>
