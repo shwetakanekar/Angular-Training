@@ -138,3 +138,11 @@
     good.
   </ngb-alert>
 </p>
+
+<hr />
+<h4>To-Do lost</h4>
+<input #task type="text" name="task" id="task" placeholder="Enter task" />
+<button (click)="addTask(task.value)">Add Task</button>
+<ul *ngFor="let task of toDoList">
+  <li>{{ task.task }} <button (click)="removeTask(task.id)">Remove</button></li>
+</ul>

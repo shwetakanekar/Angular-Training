@@ -36,6 +36,7 @@ export class AppComponent {
       hobbies: ['dancing', 'singing', 'reading'],
     },
   ];
+  toDoList: any[] = [];
 
   logData(data: string) {
     console.log(data);
@@ -61,5 +62,14 @@ export class AppComponent {
 
   toggle() {
     this.display = !this.display;
+  }
+
+  addTask(task: string) {
+    this.toDoList.push({ id: this.toDoList.length, task });
+    console.log(this.toDoList);
+  }
+
+  removeTask(id: number) {
+    this.toDoList = this.toDoList.filter((task) => task.id !== id);
   }
 }
