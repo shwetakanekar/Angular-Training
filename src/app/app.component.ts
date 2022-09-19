@@ -39,6 +39,7 @@ export class AppComponent {
   toDoList: any[] = [];
   randomNum: number = 0;
   inputFromChild: string = '';
+  twoWayBindingData: string = '';
 
   logData(data: string) {
     console.log(data);
