@@ -224,13 +224,28 @@
     placeholder="Enter email"
     formControlName="email"
   />
-  <br /><br />
+  <br />
+  <span
+    *ngIf="emailReactive && emailReactive.invalid && emailReactive.touched"
+    style="color: red; font-size: 10px"
+    >Please enter a valid email</span
+  >
+  <br />
+  <br />
   <input
     type="password"
     name="password"
     placeholder="Enter password"
     formControlName="password"
   />
+  <br />
+  <span
+    *ngIf="
+      passwordReactive && passwordReactive.invalid && passwordReactive.touched
+    "
+    style="color: red; font-size: 10px"
+    >Please enter a valid password</span
+  >
   <br /><br />
-  <button>Register</button>
+  <button [disabled]="registrationFormReactive.invalid">Register</button>
 </form>

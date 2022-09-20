@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -91,11 +91,23 @@ export class AppComponent {
   }
 
   registrationFormReactive = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+    ]),
   });
 
   onReactiveFormSubmit() {
     console.log(this.registrationFormReactive.value);
+  }
+
+  // getters for reactive forms - these are used for validations
+  get emailReactive() {
+    return this.registrationFormReactive.get('email');
+  }
+
+  get passwordReactive() {
+    return this.registrationFormReactive.get('password');
   }
 }
