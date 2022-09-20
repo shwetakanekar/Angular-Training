@@ -192,7 +192,7 @@
     ngModel
   />
   <br />
-  <span *ngIf="email.invalid && email.touched" style="color: red"
+  <span *ngIf="email.invalid && email.touched" appRedElement
     >Please enter valid email</span
   >
   <br />
@@ -206,7 +206,7 @@
     ngModel
   />
   <br />
-  <span *ngIf="password.invalid && password.touched" style="color: red"
+  <span *ngIf="password.invalid && password.touched" appRedElement
     >Please enter valid password</span
   ><br />
   <button [disabled]="registrationForm.invalid">Register</button>
@@ -227,7 +227,7 @@
   <br />
   <span
     *ngIf="emailReactive && emailReactive.invalid && emailReactive.touched"
-    style="color: red; font-size: 10px"
+    appRedElement
     >Please enter a valid email</span
   >
   <br />
@@ -243,7 +243,7 @@
     *ngIf="
       passwordReactive && passwordReactive.invalid && passwordReactive.touched
     "
-    style="color: red; font-size: 10px"
+    appRedElement
     >Please enter a valid password</span
   >
   <br /><br />

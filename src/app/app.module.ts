@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './child/child.component';
 import { InrToUsdPipe } from './pipes/inr-to-usd.pipe';
 import { ReplacePipe } from './pipes/replace.pipe';
+import { RedElementDirective } from './red-element.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReplacePipe } from './pipes/replace.pipe';
     ChildComponent,
     InrToUsdPipe,
     ReplacePipe,
+    RedElementDirective,
   ],
   imports: [BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
   providers: [],
