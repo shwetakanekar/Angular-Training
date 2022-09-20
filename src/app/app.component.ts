@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -88,5 +88,14 @@ export class AppComponent {
 
   onRegistrationFormSubmit(formData: any) {
     console.log(formData);
+  }
+
+  registrationFormReactive = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+
+  onReactiveFormSubmit() {
+    console.log(this.registrationFormReactive.value);
   }
 }

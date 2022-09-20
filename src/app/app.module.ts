@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -10,8 +10,14 @@ import { InrToUsdPipe } from './pipes/inr-to-usd.pipe';
 import { ReplacePipe } from './pipes/replace.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ChildComponent, InrToUsdPipe, ReplacePipe],
-  imports: [BrowserModule, FormsModule, NgbModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ChildComponent,
+    InrToUsdPipe,
+    ReplacePipe,
+  ],
+  imports: [BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

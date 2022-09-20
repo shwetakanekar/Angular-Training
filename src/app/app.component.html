@@ -211,3 +211,26 @@
   ><br />
   <button [disabled]="registrationForm.invalid">Register</button>
 </form>
+
+<hr />
+<h4>Reactive form</h4>
+<form
+  [formGroup]="registrationFormReactive"
+  (ngSubmit)="onReactiveFormSubmit()"
+>
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter email"
+    formControlName="email"
+  />
+  <br /><br />
+  <input
+    type="password"
+    name="password"
+    placeholder="Enter password"
+    formControlName="password"
+  />
+  <br /><br />
+  <button>Register</button>
+</form>
