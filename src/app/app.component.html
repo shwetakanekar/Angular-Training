@@ -250,3 +250,13 @@
   <br /><br />
   <button [disabled]="registrationFormReactive.invalid">Register</button>
 </form>
+
+<hr />
+<h4>Using Data from service</h4>
+<ul>
+  <li *ngFor="let employee of employees">
+    {{ employee.name }} - {{ employee.email }}
+  </li>
+</ul>
+
+<app-footer></app-footer>

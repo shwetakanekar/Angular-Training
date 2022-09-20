@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+
+import { EmployeeService } from './services/employee.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'blog';
   displayValue = '';
   counter = 0;
@@ -42,6 +44,13 @@ export class AppComponent {
   twoWayBindingData: string = '';
   message: string = 'Hello from app-component';
   todaysDate = new Date();
+  employees: any[] = [];
+
+  constructor(private employeeService: EmployeeService) {}
+
+  ngOnInit(): void {
+    this.employees = this.employeeService.getEmployeeData();
+  }
 
   logData(data: string) {
     console.log(data);
