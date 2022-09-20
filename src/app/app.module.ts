@@ -12,6 +12,7 @@ import { RedElementDirective } from './red-element.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UserComponent } from './user/user.component';
     RedElementDirective,
     AboutComponent,
     UserComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     AppRoutingModule,
