@@ -9,6 +9,9 @@ import { ChildComponent } from './child/child.component';
 import { InrToUsdPipe } from './pipes/inr-to-usd.pipe';
 import { ReplacePipe } from './pipes/replace.pipe';
 import { RedElementDirective } from './red-element.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +21,16 @@ import { RedElementDirective } from './red-element.directive';
     InrToUsdPipe,
     ReplacePipe,
     RedElementDirective,
+    AboutComponent,
+    UserComponent,
   ],
-  imports: [BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    NgbModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
