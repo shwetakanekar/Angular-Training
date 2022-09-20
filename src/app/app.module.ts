@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AboutComponent,
     UserComponent,
     PageNotFoundComponent,
+    AboutMeComponent,
+    AboutCompanyComponent,
   ],
   imports: [
     AppRoutingModule,
