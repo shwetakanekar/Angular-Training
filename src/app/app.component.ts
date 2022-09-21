@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Product } from 'models/product';
 import { ApiService } from './services/api.service';
 
 import { EmployeeService } from './services/employee.service';
@@ -46,7 +47,7 @@ export class AppComponent implements OnInit {
   message: string = 'Hello from app-component';
   todaysDate = new Date();
   employees: any[] = [];
-  products: any[] = [];
+  products: Product[] = [];
 
   constructor(
     private employeeService: EmployeeService,
