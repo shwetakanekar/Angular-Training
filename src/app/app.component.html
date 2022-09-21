@@ -259,4 +259,11 @@
   </li>
 </ul>
 
+<hr />
+<h4>Getting data from API</h4>
+<ul *ngFor="let product of products">
+  <li>Product: {{ product.product_name }}</li>
+  <li>Price: {{ product.price }}</li>
+</ul>
+
 <app-footer></app-footer>

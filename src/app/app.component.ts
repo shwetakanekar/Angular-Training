@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { ApiService } from './services/api.service';
 
 import { EmployeeService } from './services/employee.service';
 
@@ -45,11 +46,16 @@ export class AppComponent implements OnInit {
   message: string = 'Hello from app-component';
   todaysDate = new Date();
   employees: any[] = [];
+  products: any[] = [];
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(
+    private employeeService: EmployeeService,
+    private apiService: ApiService
+  ) {}
 
   ngOnInit(): void {
     this.employees = this.employeeService.getEmployeeData();
+    this.getProducts();
   }
 
   logData(data: string) {
@@ -118,5 +124,11 @@ export class AppComponent implements OnInit {
 
   get passwordReactive() {
     return this.registrationFormReactive.get('password');
+  }
+
+  getProducts() {
+    this.apiService.getProducts().subscribe((products) => {
+      this.products = products;
+    });
   }
 }
