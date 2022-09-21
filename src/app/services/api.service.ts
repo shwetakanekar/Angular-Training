@@ -11,6 +11,12 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<any> {
-    return this.http.get(this.baseURL + '/products');
+    return this.http.get<any>(this.baseURL + '/products');
+  }
+
+  addProduct(productDetails: any) {
+    return this.http.post<any>(this.baseURL + '/products', productDetails, {
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }

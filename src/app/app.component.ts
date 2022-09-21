@@ -131,4 +131,12 @@ export class AppComponent implements OnInit {
       this.products = products;
     });
   }
+
+  addNewProduct(product: any, productForm: NgForm) {
+    this.apiService.addProduct(product).subscribe((prod) => {
+      console.log('product added', prod);
+      this.getProducts();
+      productForm.reset();
+    });
+  }
 }

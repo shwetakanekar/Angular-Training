@@ -266,4 +266,28 @@
   <li>Price: {{ product.price }}</li>
 </ul>
 
+<form
+  #productForm="ngForm"
+  (ngSubmit)="addNewProduct(productForm.value, productForm)"
+>
+  <input
+    type="text"
+    name="product_name"
+    ngModel
+    placeholder="Enter product name"
+    required
+  />
+  <br /><br />
+  <input
+    type="number"
+    name="price"
+    ngModel
+    placeholder="Enter price"
+    required
+  />
+  <br /><br />
+  <button type="submit" [disabled]="productForm.invalid">
+    Add New Product
+  </button>
+</form>
 <app-footer></app-footer>

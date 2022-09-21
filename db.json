@@ -6,14 +6,19 @@
       "price": 100
     },
     {
-      "id": 1,
+      "id": 2,
       "product_name": "Orange",
       "price": 120
     },
     {
-      "id": 1,
+      "id": 3,
       "product_name": "Watermelon",
       "price": 150
+    },
+    {
+      "product_name": "Banana",
+      "price": 70,
+      "id": 4
     }
   ]
 }
