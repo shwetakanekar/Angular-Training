@@ -17,6 +17,11 @@ const routes: Routes = [
       { path: 'me', component: AboutMeComponent },
     ],
   },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((mod) => mod.AdminModule),
+  },
   { path: 'user/:id', component: UserComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
